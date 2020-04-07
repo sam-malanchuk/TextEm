@@ -10,6 +10,7 @@ const twilio = require('twilio');
 // Twilio API
 const accountSid = process.env.ACCOUNT_SID;
 const authToken = process.env.AUTH_TOKEN;
+const serviceSid = process.env.SERVICE_SID;
 const client = require('twilio')(accountSid, authToken);
 
 console.log(process.env.PORT)
@@ -35,6 +36,7 @@ app.post('/send', (req, res) => {
         from: '+17042861326'
     })
     .then((message) => console.log(message.body))
+    .catch(error => console.log(error))
     res.status(200).json("Sent Message: " + message);
 });
 
