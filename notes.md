@@ -1,1 +1,1 @@
-input of special characters
+create contacts and groups
