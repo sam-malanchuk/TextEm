@@ -7,11 +7,13 @@ import 'mdbreact/dist/css/mdb.css';
 import { Route } from 'react-router-dom';
 import { MDBContainer } from "mdbreact";
 import Landing from './components/Landing';
+import SendText from './components/SendText';
 
 function App() {
   return (
     <MDBContainer>
       <Route exact path="/" component={Landing} />
+      <Route exact path="/demo" component={SendText} />
     </MDBContainer>
   );
 }
