@@ -1,4 +1,4 @@
-require('dotenv').config({path: './.env'});
+require('dotenv').config({path: '../.env'});
 
 // Dependencies 
 // npm i express cors twilio
