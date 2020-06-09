@@ -48,7 +48,7 @@ class SendText extends React.Component {
                         required
                         />
                     <br />
-                    <MDBBtn color="info">Send a Text!</MDBBtn>
+                    <MDBBtn color="deep-orange">Send a Text!</MDBBtn>
                 </MDBCol>
             </MDBRow>
         );
