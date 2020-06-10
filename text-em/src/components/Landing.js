@@ -10,7 +10,7 @@ function Landing() {
                 <h2>Welcome to Text-Em</h2>
                 <h4>The platform that allows you to easily send out text message communications to a large group.</h4>
                 <br />
-                <Link to="/register"><MDBBtn color="info">Let's go!</MDBBtn></Link>
+                <Link to="/demo"><MDBBtn color="deep-orange">Send a Text!</MDBBtn></Link>
             </MDBCol>
         </MDBRow>
     );
