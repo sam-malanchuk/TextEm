@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { send_sms } from '../redux/actions.js';
 import { MDBRow, MDBCol, MDBBtn, MDBInput } from "mdbreact";
 
 class SendText extends React.Component {
@@ -55,4 +57,19 @@ class SendText extends React.Component {
     }
 }
 
-export default withRouter(SendText);
+const mapStateToProps = state => ({
+    sendLoading: state.sendLoading,
+    sendError: state.sendError,
+    sendConfirm: state.sendConfirm,
+})
+
+const mapDispatchToProps = {
+    send_sms,
+}
+
+export default withRouter(
+    connect(
+        mapStateToProps,
+        mapDispatchToProps,
+    )(SendText)
+);
