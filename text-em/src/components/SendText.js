@@ -13,12 +13,30 @@ class SendText extends React.Component {
 		}
     }
 
-	handleChange = (evt) => {
-		evt.preventDefault()
+	handleChange = event => {
+		event.preventDefault()
 
 		this.setState({
-			[evt.target.name]: evt.target.value,
+			[event.target.name]: event.target.value,
         })
+    }
+
+    handleSubmit = event => {
+        event.preventDefault();
+
+        const { phone, message } = this.state;
+        const payload = {
+            "recipient": "+1" + phone,
+            "message": message,
+        }
+
+        this.props.send_sms(payload)
+            .then(() => {
+                console.log("Text has sent!");
+            })
+            .catch((err) => {
+                console.error(err);
+            })
     }
     
 	render() {
@@ -26,31 +44,33 @@ class SendText extends React.Component {
         
         return (
             <MDBRow center>
-                <MDBCol className="text-center" md="8">
-                    <h2>Text-Em Demo</h2>
-                    <h4>Try it out yourself!</h4>
-                    <MDBInput
-                            label="Phone Number"
+                <form onSubmit={this.handleSubmit}>
+                    <MDBCol className="text-center" md="8">
+                        <h2>Text-Em Demo</h2>
+                        <h4>Try it out yourself!</h4>
+                        <MDBInput
+                                label="Phone Number"
+                                group
+                                type="phone"
+                                name="phone"
+                                value={phone}
+                                validate
+                                onChange={this.handleChange}
+                                required
+                                />
+                        <MDBInput
+                            label="Text Message"
                             group
-                            type="phone"
-                            name="phone"
-                            value={phone}
+                            type="text"
+                            name="message"
+                            value={message}
                             validate
                             onChange={this.handleChange}
                             required
                             />
-                    <MDBInput
-                        label="Text Message"
-                        group
-                        type="text"
-                        name="message"
-                        value={message}
-                        validate
-                        onChange={this.handleChange}
-                        required
-                        />
-                    <br />
-                    <MDBBtn color="deep-orange">Send a Text!</MDBBtn>
+                        <br />
+                        <MDBBtn type="submit" color="deep-orange">Send a Text!</MDBBtn>
+                    </form>
                 </MDBCol>
             </MDBRow>
         );
