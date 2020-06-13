@@ -45,33 +45,31 @@ class SendText extends React.Component {
         return (
             <MDBRow center>
                 <form onSubmit={this.handleSubmit}>
-                    <MDBCol className="text-center" md="8">
-                        <h2>Text-Em Demo</h2>
-                        <h4>Try it out yourself!</h4>
-                        <MDBInput
-                                label="Phone Number"
-                                group
-                                type="phone"
-                                name="phone"
-                                value={phone}
-                                validate
-                                onChange={this.handleChange}
-                                required
-                                />
-                        <MDBInput
-                            label="Text Message"
+                    <h2>Text-Em Demo</h2>
+                    <h4>Try it out yourself!</h4>
+                    <MDBInput
+                            label="Phone Number"
                             group
-                            type="text"
-                            name="message"
-                            value={message}
+                            type="phone"
+                            name="phone"
+                            value={phone}
                             validate
                             onChange={this.handleChange}
                             required
                             />
-                        <br />
-                        <MDBBtn type="submit" color="deep-orange">Send a Text!</MDBBtn>
-                    </form>
-                </MDBCol>
+                    <MDBInput
+                        label="Text Message"
+                        group
+                        type="text"
+                        name="message"
+                        value={message}
+                        validate
+                        onChange={this.handleChange}
+                        required
+                        />
+                    <br />
+                    <MDBBtn type="submit" color="deep-orange">Send a Text!</MDBBtn>
+                </form>
             </MDBRow>
         );
     }
