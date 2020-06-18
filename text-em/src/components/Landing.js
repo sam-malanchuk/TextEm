@@ -9,7 +9,7 @@ function Landing() {
             <MDBCol className="text-center" md="8">
                 <h2>Welcome to Text-Em</h2>
                 <h4>The platform that allows you to easily send out text message communications to a large group.</h4>
-                <br />
+                <br /><br />
                 <Link to="/demo"><MDBBtn color="deep-orange">Send a Text!</MDBBtn></Link>
             </MDBCol>
         </MDBRow>
