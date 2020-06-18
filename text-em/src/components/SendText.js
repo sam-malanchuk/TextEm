@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { send_sms } from '../redux/actions.js';
-import { MDBRow, MDBCol, MDBBtn, MDBInput } from "mdbreact";
+import { MDBRow, MDBBtn, MDBInput } from "mdbreact";
 
 class SendText extends React.Component {
     constructor() {
