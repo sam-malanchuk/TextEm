@@ -35,7 +35,7 @@ app.post('/send', (req, res) => {
         to: recipient,
         from: '+17042861326'
     })
-    .then((message) => console.log(message.body))
+    .then((message) => console.log("Sent to " + recipient + " message: " + message.body))
     .catch(error => console.log(error))
     res.status(200).json("Sent Message: " + message);
 });
