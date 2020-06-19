@@ -14,13 +14,11 @@ import Home from './components/Home';
 function App() {
   return (
     <React.Fragment>
+      <Header />
       <Route exact path="/" component={Home} />
+      <Route exact path="/demo" component={SendText} />
+      <Route exact path="/landing" component={Landing} />
     </React.Fragment>
-    // <MDBContainer>
-      // <Header />
-      // <Route exact path="/" component={Landing} />
-      // <Route exact path="/demo" component={SendText} />
-    // </MDBContainer>
   );
 }
 
