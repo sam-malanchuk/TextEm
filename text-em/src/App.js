@@ -8,13 +8,19 @@ import { Route } from 'react-router-dom';
 import { MDBContainer } from "mdbreact";
 import Landing from './components/Landing';
 import SendText from './components/SendText';
+import Header from './components/Header';
+import Home from './components/Home';
 
 function App() {
   return (
-    <MDBContainer>
-      <Route exact path="/" component={Landing} />
-      <Route exact path="/demo" component={SendText} />
-    </MDBContainer>
+    <React.Fragment>
+      <Route exact path="/" component={Home} />
+    </React.Fragment>
+    // <MDBContainer>
+      // <Header />
+      // <Route exact path="/" component={Landing} />
+      // <Route exact path="/demo" component={SendText} />
+    // </MDBContainer>
   );
 }
 
