@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import { MDBRow, MDBCol, MDBBtn } from "mdbreact";
+import { MDBRow, MDBCol } from "mdbreact";
 
 function Landing() {
     return (
@@ -10,7 +9,6 @@ function Landing() {
                 <h2>Welcome to Text-Em</h2>
                 <h4>The platform that allows you to easily send out text message communications to a large group.</h4>
                 <br /><br />
-                <Link to="/demo"><MDBBtn color="deep-orange">Send a Text!</MDBBtn></Link>
             </MDBCol>
         </MDBRow>
     );
