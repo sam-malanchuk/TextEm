@@ -2,7 +2,8 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { send_sms } from '../redux/actions.js';
-import { MDBRow, MDBBtn, MDBInput } from "mdbreact";
+import { MDBView, MDBContainer, MDBRow, MDBCol, MDBMask, MDBBtn, MDBInput } from "mdbreact";
+import '../AppPage.css';
 
 class SendText extends React.Component {
     constructor() {
@@ -43,10 +44,17 @@ class SendText extends React.Component {
 		const { phone, message } = this.state
         
         return (
-            <MDBRow center>
+        <div>
+          <MDBView>
+            <MDBMask className='white-text gradient' />
+            <MDBContainer
+            style={{ paddingTop: '10rem' }}
+            >
+              <MDBRow center>
+              <MDBCol md='6' className='text-center text-md-left mt-xl-5 mb-5'>
                 <form onSubmit={this.handleSubmit}>
-                    <h2>Text-Em Demo</h2>
-                    <h4>Try it out yourself!</h4>
+                    <h2>Free Demo</h2>
+                    <p>Enter any number and a message to send a text message</p>
                     <MDBInput
                             label="Phone Number"
                             group
@@ -70,7 +78,11 @@ class SendText extends React.Component {
                     <br />
                     <MDBBtn type="submit" color="deep-orange">Send a Text!</MDBBtn>
                 </form>
+              </MDBCol>
             </MDBRow>
+          </MDBContainer>
+        </MDBView>
+        </div>
         );
     }
 }
