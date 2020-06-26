@@ -8,9 +8,14 @@ class Notification extends Component {
         show
         fade
         iconClassName="text-primary"
-        title="Bootstrap"
-        message="Hello, world! This is a toast message."
-        text="11 mins ago"
+        message="Your text message has been sent!"
+        text="Now"
+        style={{
+          position: "fixed",
+          bottom: "10px",
+          right: "10px",
+          zIndex: 9999
+        }}
       />
     );
   }

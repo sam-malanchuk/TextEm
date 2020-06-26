@@ -1,5 +1,6 @@
 import React from 'react';
 import { MDBMask, MDBRow, MDBCol, MDBBtn, MDBView, MDBContainer, MDBAnimation } from 'mdbreact';
+import { Link } from 'react-router-dom';
 import '../AppPage.css';
 
 class Home extends React.Component {
@@ -20,14 +21,15 @@ class Home extends React.Component {
                   </h1>
                   <hr className='hr-light' />
                   <h6 className='mb-4'>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-                  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
-                  veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+                  The platform that allows you to easily send out 
+                  text message communications to a large group with a click of a button.
                   </h6>
-                  <MDBBtn color='white'>Download</MDBBtn>
-                  <MDBBtn outline color='white'>
-                    Learn More
-                  </MDBBtn>
+                  <Link to="/demo">
+                    <MDBBtn color='white'>Try Demo</MDBBtn>
+                  </Link>
+                  <Link to="/demo">
+                    <MDBBtn outline color='white'>Sign Up</MDBBtn>
+                  </Link>
                 </MDBAnimation>
               </MDBCol>
 
@@ -43,21 +45,6 @@ class Home extends React.Component {
             </MDBRow>
           </MDBContainer>
         </MDBView>
-
-        <MDBContainer>
-          <MDBRow className='py-5'>
-            <MDBCol md='12' className='text-center'>
-              <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-                  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
-                  veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-                  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
-                  veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-              </p>
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
       </div>
     );
   }
