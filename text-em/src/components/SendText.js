@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { send_sms } from '../redux/actions.js';
 import { MDBView, MDBContainer, MDBRow, MDBCol, MDBMask, MDBBtn, MDBInput } from "mdbreact";
+import Notification from './Notfication.js';
 import '../AppPage.css';
 
 class SendText extends React.Component {
@@ -41,8 +42,9 @@ class SendText extends React.Component {
     }
     
 	render() {
-		const { phone, message } = this.state
-        
+        const { phone, message } = this.state;
+        const { sendLoading, sendError, sendConfirm } = this.props;
+
         return (
         <div>
           <MDBView>
@@ -76,6 +78,15 @@ class SendText extends React.Component {
                         required
                         />
                     <br />
+                    {sendLoading
+                    ? <p>Loading...</p>
+                    : <p>Not Loading...</p>}
+                    {sendError
+                    ? <p>{sendError}</p>
+                    : <p>No Error...</p>}
+                    {sendConfirm
+                    ? <Notification />
+                    : null}
                     <MDBBtn type="submit" color="deep-orange">Send a Text!</MDBBtn>
                 </form>
               </MDBCol>
