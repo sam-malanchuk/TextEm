@@ -1,1 +1,1 @@
-home demo page has 1 token to send one test message only
+add a character limit on the input box
