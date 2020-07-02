@@ -1,1 +1,1 @@
-add the option to schedule a message at a specific time
+home demo page has 1 token to send one test message only
