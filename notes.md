@@ -1,1 +1,1 @@
-response from sending redux action as toaster notification
+Accounts database stores messages amount to be sent out per money deposited
