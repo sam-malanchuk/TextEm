@@ -1,1 +1,1 @@
-Links safety
+input of special characters
